@@ -4,6 +4,38 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.0] — 2026-03-03
+
+### Added
+
+- Cinematic splash gate with Web Audio THX-style crescendo (`SplashGate.tsx`)
+- Interactive "Choose an Experience" landing with cursor-driven theme bleed (`ExperienceLanding.tsx`)
+- Shared Web Audio singleton (`AudioEngine.ts`) for THX synthesis, preview crossfader, and ambient player
+- `LandingIsland.tsx` wrapper orchestrating splash → landing flow
+- Engineering experience: CRT terminal with scanlines, boot sequence, phosphor glow, blinking cursor
+- Design experience: dark editorial magazine with Playfair Display serif, asymmetric grid layout
+- Workshop experience: blueprint paper with CSS grid overlay, annotation callouts, fixed title block
+- Framer Motion for spring animations and flood transitions on click
+- Placeholder ambient audio files (`.ogg`) for all 3 experiences
+- Design experience route (`/design`), layout, and theme
+- Architecture Decision Records ADR-006 through ADR-008
+
+### Changed
+
+- Renamed `/work` → `/engineering` (route, layout, theme, components)
+- Renamed Portal → Landing (layout, theme, CSS selectors)
+- Updated index.astro from placeholder SVG to React island with splash + landing
+- Expanded engineering.css with CRT body overlays, flicker animation, phosphor glow
+- Expanded workshop.css with grid paper background, dimension markers, callout component
+
+### Removed
+
+- Study, Signal, Life domain pages, layouts, themes, content collections, and component dirs
+- Portal graph component placeholder
+- References to 3D neural graph / Three.js concept
+
+---
+
 ## [0.1.0] — 2026-03-02
 
 ### Added
