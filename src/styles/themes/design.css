@@ -1,0 +1,54 @@
+/* Design — dark editorial magazine theme */
+[data-theme="design"] {
+  --color-bg: #0c0c0c;
+  --color-surface: #161616;
+  --color-text: #f0f0f0;
+  --color-text-muted: #999999;
+  --color-accent: #ffffff;
+  --color-accent-glow: rgba(255, 255, 255, 0.15);
+  --color-border: #333333;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+[data-theme="design"] body {
+  font-family: var(--font-mono);
+}
+
+[data-theme="design"] h1 {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+[data-theme="design"] h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="design"] hr {
+  border: none;
+  height: 3px;
+  background: var(--color-accent);
+  margin: var(--space-xl) 0;
+}
+
+[data-theme="design"] nav {
+  padding: 1.5rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+[data-theme="design"] nav a {
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+
+[data-theme="design"] nav a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}

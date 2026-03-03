@@ -7,22 +7,20 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="signal">
+<html lang="en" data-theme="landing">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rock Roqué — Design Engineer & Civic Technologist. Choose an experience." />
     <link rel="icon" type="image/svg+xml" href="/rockroque.com/favicon.svg" />
-    <title>{title} — Rock Roqué</title>
+    <title>{title}</title>
     <style>
       @import '../styles/global.css';
-      @import '../styles/themes/signal.css';
+      @import '../styles/themes/landing.css';
     </style>
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <nav aria-label="Portal navigation">
-      <a href="/rockroque.com/">← Portal</a>
-    </nav>
     <main id="main">
       <slot />
     </main>

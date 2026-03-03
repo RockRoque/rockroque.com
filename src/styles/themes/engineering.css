@@ -1,0 +1,84 @@
+/* Engineering — CRT amber terminal theme */
+[data-theme="engineering"] {
+  --color-bg: #0a0a0c;
+  --color-surface: #141410;
+  --color-text: #ffb84d;
+  --color-text-muted: #cc8a00;
+  --color-accent: #ff9900;
+  --color-accent-glow: rgba(255, 149, 0, 0.3);
+  --color-border: #3d3d00;
+
+  --crt-scanline-color: rgba(255, 153, 0, 0.04);
+  --crt-glow: 0 0 8px rgba(255, 153, 0, 0.4), 0 0 20px rgba(255, 153, 0, 0.1);
+}
+
+[data-theme="engineering"] body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+[data-theme="engineering"] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-scanline);
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--crt-scanline-color) 2px,
+    var(--crt-scanline-color) 4px
+  );
+}
+
+[data-theme="engineering"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: calc(var(--z-scanline) - 1);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+[data-theme="engineering"] h1,
+[data-theme="engineering"] h2,
+[data-theme="engineering"] h3 {
+  text-shadow: var(--crt-glow);
+}
+
+@keyframes crt-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.95; }
+  94% { opacity: 1; }
+}
+
+[data-theme="engineering"] main {
+  animation: crt-flicker 4s infinite;
+}
+
+[data-theme="engineering"] nav {
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+[data-theme="engineering"] nav a {
+  color: var(--color-accent);
+  text-shadow: 0 0 6px rgba(255, 149, 0, 0.3);
+}
+
+[data-theme="engineering"] nav a::before {
+  content: '> ';
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="engineering"] main {
+    animation: none;
+  }
+}

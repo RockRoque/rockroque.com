@@ -3,36 +3,140 @@ import WorkshopLayout from '../../layouts/WorkshopLayout.astro';
 ---
 
 <WorkshopLayout title="Workshop">
-  <div class="placeholder">
-    <h1>Rock's Workshop</h1>
-    <p>Experiments · Open Source · AI Workflows</p>
-    <p class="placeholder__status">Domain under construction</p>
+  <div class="blueprint">
+    <header class="blueprint__header">
+      <div class="blueprint__stamp">
+        <h1>Workshop</h1>
+        <p class="blueprint__drawing-info">
+          DWG NO. RR-WK-001 &nbsp;|&nbsp; REV A &nbsp;|&nbsp; SCALE: NTS
+        </p>
+      </div>
+    </header>
+
+    <section class="blueprint__content">
+      <div class="callout" data-label="Section A — Overview">
+        <p>
+          Experiments, open source tools, and AI workflow automations.
+          Each project documented as a technical drawing —
+          architecture diagrams, system schematics, and interactive blueprints.
+        </p>
+      </div>
+
+      <div class="blueprint__grid">
+        <div class="callout" data-label="Detail B — Experiments">
+          <p>Live prototypes and demos</p>
+          <p class="blueprint__status">Loading...</p>
+        </div>
+
+        <div class="callout" data-label="Detail C — Open Source">
+          <p>Tools and contributions</p>
+          <p class="blueprint__status">Loading...</p>
+        </div>
+
+        <div class="callout" data-label="Detail D — AI Workflows">
+          <p>Claude patterns, n8n automations</p>
+          <p class="blueprint__status">Loading...</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="blueprint__title-block">
+      <div class="blueprint__title-block-inner">
+        <p class="blueprint__title-block-label">Rock Roqué — Workshop</p>
+        <p class="blueprint__title-block-meta">Date: 2026-03-03 &nbsp;|&nbsp; Sheet 1 of 1</p>
+      </div>
+    </footer>
   </div>
 </WorkshopLayout>
 
 <style>
-  .placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    text-align: center;
+  .blueprint {
+    min-height: 100vh;
     padding: var(--space-lg);
+    padding-left: 60px;
+    font-family: var(--font-mono);
   }
 
-  .placeholder h1 {
+  .blueprint__header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .blueprint__stamp {
+    display: inline-block;
+    border: 2px solid var(--color-accent);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .blueprint__stamp h1 {
     font-size: var(--text-2xl);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
   }
 
-  .placeholder p {
+  .blueprint__drawing-info {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
     color: var(--color-text-muted);
   }
 
-  .placeholder__status {
-    margin-top: var(--space-lg);
-    font-size: var(--text-sm);
-    opacity: 0.6;
+  .blueprint__content {
+    max-width: 900px;
+  }
+
+  .blueprint__content > .callout {
+    margin-bottom: var(--space-xl);
+  }
+
+  .blueprint__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .blueprint__status {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+    opacity: 0.5;
+  }
+
+  .blueprint__title-block {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .blueprint__title-block-inner {
+    border: 1px solid var(--color-accent);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--color-bg);
+  }
+
+  .blueprint__title-block-label {
+    color: var(--color-accent);
+    margin-bottom: 2px;
+  }
+
+  .blueprint__title-block-meta {
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .blueprint {
+      padding-left: var(--space-md);
+    }
+
+    .blueprint__title-block {
+      position: static;
+      margin-top: var(--space-xl);
+    }
+
+    .blueprint__grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

@@ -7,21 +7,24 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="work">
+<html lang="en" data-theme="design">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/rockroque.com/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" />
     <title>{title} — Rock Roqué</title>
     <style>
       @import '../styles/global.css';
-      @import '../styles/themes/work.css';
+      @import '../styles/themes/design.css';
     </style>
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <nav aria-label="Portal navigation">
-      <a href="/rockroque.com/">← Portal</a>
+    <nav aria-label="Experience navigation">
+      <a href="/rockroque.com/">← Choose Experience</a>
     </nav>
     <main id="main">
       <slot />

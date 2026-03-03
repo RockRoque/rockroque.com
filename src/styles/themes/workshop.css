@@ -1,10 +1,87 @@
-/* Workshop — blueprint neon cyan theme */
+/* Workshop — blueprint paper theme */
 [data-theme="workshop"] {
   --color-bg: #0a1628;
-  --color-surface: #0f1f3a;
+  --color-surface: #0d2137;
   --color-text: #c8e6ff;
   --color-text-muted: #6b9cc8;
-  --color-accent: #00e5ff;
-  --color-accent-glow: rgba(0, 229, 255, 0.3);
+  --color-accent: #5bb8f5;
+  --color-accent-glow: rgba(91, 184, 245, 0.3);
   --color-border: #1a3a5c;
+
+  --blueprint-line: rgba(91, 184, 245, 0.15);
+  --blueprint-line-major: rgba(91, 184, 245, 0.25);
+}
+
+[data-theme="workshop"] body {
+  background:
+    linear-gradient(var(--blueprint-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--blueprint-line) 1px, transparent 1px),
+    linear-gradient(var(--blueprint-line-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--blueprint-line-major) 1px, transparent 1px);
+  background-size:
+    20px 20px,
+    20px 20px,
+    100px 100px,
+    100px 100px;
+  background-color: var(--color-bg);
+}
+
+[data-theme="workshop"] body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  pointer-events: none;
+  z-index: 1;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 98px,
+    rgba(91, 184, 245, 0.2) 98px,
+    rgba(91, 184, 245, 0.2) 100px
+  );
+  border-right: 1px solid rgba(91, 184, 245, 0.15);
+}
+
+[data-theme="workshop"] nav {
+  padding: 1rem 1.5rem;
+  padding-left: 50px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+[data-theme="workshop"] nav a {
+  color: var(--color-accent);
+}
+
+[data-theme="workshop"] h1,
+[data-theme="workshop"] h2,
+[data-theme="workshop"] h3 {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+[data-theme="workshop"] .callout {
+  position: relative;
+  border: 1px solid var(--color-accent);
+  padding: var(--space-md);
+  font-size: var(--text-sm);
+}
+
+[data-theme="workshop"] .callout::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -0.6em;
+  left: var(--space-md);
+  background: var(--color-bg);
+  padding: 0 var(--space-xs);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
