@@ -1,0 +1,10 @@
+/* Life — warm earth tones theme */
+[data-theme="life"] {
+  --color-bg: #f5efe6;
+  --color-surface: #ebe3d6;
+  --color-text: #3d3028;
+  --color-text-muted: #7a6b5c;
+  --color-accent: #c07830;
+  --color-accent-glow: rgba(192, 120, 48, 0.15);
+  --color-border: #d4c8b8;
+}

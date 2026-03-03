@@ -1,0 +1,10 @@
+/* Workshop — blueprint neon cyan theme */
+[data-theme="workshop"] {
+  --color-bg: #0a1628;
+  --color-surface: #0f1f3a;
+  --color-text: #c8e6ff;
+  --color-text-muted: #6b9cc8;
+  --color-accent: #00e5ff;
+  --color-accent-glow: rgba(0, 229, 255, 0.3);
+  --color-border: #1a3a5c;
+}

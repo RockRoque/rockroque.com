@@ -1,0 +1,38 @@
+---
+import SignalLayout from '../../layouts/SignalLayout.astro';
+---
+
+<SignalLayout title="Signal">
+  <div class="placeholder">
+    <h1>Rock's Signal</h1>
+    <p>Writing · AI Philosophy · Notes</p>
+    <p class="placeholder__status">Domain under construction</p>
+  </div>
+</SignalLayout>
+
+<style>
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .placeholder h1 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .placeholder p {
+    color: var(--color-text-muted);
+  }
+
+  .placeholder__status {
+    margin-top: var(--space-lg);
+    font-size: var(--text-sm);
+    opacity: 0.6;
+  }
+</style>
