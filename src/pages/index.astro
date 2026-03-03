@@ -1,31 +1,8 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
+import LandingIsland from '../components/landing/LandingIsland';
 ---
 
 <LandingLayout title="Rock Roqué — Choose an Experience">
-  <div class="landing-placeholder">
-    <h1>Choose an Experience</h1>
-    <p>Splash gate + experience landing coming soon</p>
-  </div>
+  <LandingIsland client:only="react" />
 </LandingLayout>
-
-<style>
-  .landing-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    padding: var(--space-lg);
-  }
-
-  .landing-placeholder h1 {
-    font-size: var(--text-3xl);
-    margin-bottom: var(--space-sm);
-  }
-
-  .landing-placeholder p {
-    color: var(--color-text-muted);
-  }
-</style>
