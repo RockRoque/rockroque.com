@@ -1,0 +1,26 @@
+{
+  "name": "rockroque.com",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Rock Roqué's Mind Portal — an explorable map of a mind",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.18.0",
+    "@astrojs/react": "^4.2.1",
+    "@astrojs/mdx": "^4.1.0",
+    "@astrojs/sitemap": "^3.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
+  },
+  "packageManager": "pnpm@10.11.0"
+}
